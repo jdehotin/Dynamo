@@ -156,7 +156,7 @@ namespace Dynamo.Nodes
         }
     }
 
-    [NodeName("Select Fam")]
+    [NodeName("Select Family Type")]
     [NodeCategory(BuiltinNodeCategories.CORE_SELECTION)]
     [NodeDescription("Select a Family Type from a drop down list.")]
     [IsInteractive(true)]
@@ -164,7 +164,7 @@ namespace Dynamo.Nodes
     {
         public dynFamilyTypeSelector()
         {
-            OutPortData.Add(new PortData("", "Family type", typeof(Value.Container)));
+            OutPortData.Add(new PortData("ft", "Family type", typeof(Value.Container)));
             RegisterAllPorts();
 
             PopulateItems();
@@ -198,7 +198,7 @@ namespace Dynamo.Nodes
 
     [NodeName("Select Family Instance Parameter")]
     [NodeCategory(BuiltinNodeCategories.CORE_SELECTION)]
-    [NodeDescription("Given a Family Instance or Symbol, allows the user to select a parameter as a string.")]
+    [NodeDescription("Given a Family Instance or Symbol, allows the user to select an instance parameter as a string.")]
     [NodeSearchTags("fam")]
     [IsInteractive(true)]
     public class dynFamilyInstanceParameterSelector : dynDropDrownBase
@@ -209,7 +209,7 @@ namespace Dynamo.Nodes
         public dynFamilyInstanceParameterSelector()
         {
             InPortData.Add(new PortData("f", "Family Symbol or Instance", typeof(Value.Container)));
-            OutPortData.Add(new PortData("", "Parameter Name", typeof(Value.String)));
+            OutPortData.Add(new PortData("", "Instance Parameter Name", typeof(Value.String)));
 
             RegisterAllPorts();
         }
@@ -356,6 +356,160 @@ namespace Dynamo.Nodes
                 PopulateItems();
                 SelectedIndex = index;
             }  
+        }
+    }
+
+
+    [NodeName("Select Family Type Parameter")]
+    [NodeCategory(BuiltinNodeCategories.CORE_SELECTION)]
+    [NodeDescription("Given a Family Instance or Symbol, allows the user to select a type parameter as a string.")]
+    [NodeSearchTags("fam")]
+    [IsInteractive(true)]
+    public class dynFamilyTypeParameterSelector : dynDropDrownBase
+    {
+        ElementId storedId = null;
+        private Element element;
+
+        public dynFamilyTypeParameterSelector()
+        {
+            InPortData.Add(new PortData("f", "Family Symbol or Instance", typeof(Value.Container)));
+            OutPortData.Add(new PortData("", "Type Parameter Name", typeof(Value.String)));
+
+            RegisterAllPorts();
+        }
+
+        private static string getStorageTypeString(StorageType st)
+        {
+            switch (st)
+            {
+                case StorageType.Integer:
+                    return "int";
+                case StorageType.Double:
+                    return "dbl";
+                case StorageType.String:
+                    return "str";
+                case StorageType.ElementId:
+                default:
+                    return "id";
+            }
+        }
+
+        public override void PopulateItems() //(IEnumerable set, bool readOnly)
+        {
+            var doc = dynRevitSettings.Doc.Document;
+
+            this.Items.Clear();
+
+            if (element is FamilySymbol)
+            {
+                var paramDict = new Dictionary<string, dynamic>();
+
+                var fs = element as FamilySymbol;
+
+                foreach (dynamic p in fs.Parameters)
+                {
+                    if (p.IsReadOnly || p.StorageType == StorageType.None)
+                        continue;
+                    Items.Add(
+                            new DynamoDropDownItem(p.Definition.Name + " (" + getStorageTypeString(p.StorageType) + ")", p));
+                }
+
+            }
+            else if (element is FamilyInstance)
+            {
+                var fi = element as FamilyInstance;
+                var fs = fi.Symbol;
+
+                foreach (dynamic p in fs.Parameters)
+                {
+                    if (p.IsReadOnly || p.StorageType == StorageType.None)
+                        continue;
+                    Items.Add(
+                            new DynamoDropDownItem(p.Definition.Name + " (" + getStorageTypeString(p.StorageType) + ")", p));
+                }
+            }
+            else
+            {
+                this.storedId = null;
+            }
+
+            this.Items = this.Items.OrderBy(x => x.Name).ToObservableCollection<DynamoDropDownItem>();
+        }
+
+        public override Value Evaluate(FSharpList<Value> args)
+        {
+            element = (Element)((Value.Container)args[0]).Item;
+
+            if (element.GetType() != typeof(FamilyInstance))
+            {
+                throw new Exception("The input is not a Family Instance.");
+            }
+
+            if (!element.Id.Equals(this.storedId))
+            {
+                this.storedId = element.Id;
+
+                PopulateItems();
+            }
+
+            if (SelectedIndex == -1)
+                throw new Exception("Please select a parameter.");
+
+            return Value.NewContainer(((Parameter)Items[SelectedIndex].Item).Definition);
+        }
+
+        public override void SaveElement(XmlDocument xmlDoc, XmlElement dynEl)
+        {
+            XmlElement outEl = xmlDoc.CreateElement("familyid");
+            outEl.SetAttribute("value", this.storedId.IntegerValue.ToString());
+            dynEl.AppendChild(outEl);
+
+            XmlElement param = xmlDoc.CreateElement("index");
+            param.SetAttribute("value", SelectedIndex.ToString());
+            dynEl.AppendChild(param);
+        }
+
+        public override void LoadElement(XmlNode elNode)
+        {
+            var doc = dynRevitSettings.Doc.Document;
+
+            int index = -1;
+
+            foreach (XmlNode subNode in elNode.ChildNodes)
+            {
+                if (subNode.Name.Equals("familyid"))
+                {
+                    int id;
+                    try
+                    {
+                        id = Convert.ToInt32(subNode.Attributes[0].Value);
+                    }
+                    catch
+                    {
+                        continue;
+                    }
+                    this.storedId = new ElementId(id);
+
+                    element = doc.GetElement(this.storedId);
+
+                }
+                else if (subNode.Name.Equals("index"))
+                {
+                    try
+                    {
+                        index = Convert.ToInt32(subNode.Attributes[0].Value);
+                    }
+                    catch
+                    {
+                    }
+                }
+            }
+
+            if (element != null)
+            {
+                PopulateItems();
+                SelectedIndex = index;
+            }
         }
     }
 
@@ -959,7 +1113,7 @@ namespace Dynamo.Nodes
         }
     }
 
-    [NodeName("Curves from Fam")]
+    [NodeName("Curves from Family")]
     [NodeCategory(BuiltinNodeCategories.REVIT_FAMILYCREATION)]
     [NodeDescription("Extracts curves from family instances.")]
     public class dynCurvesFromFamilyInstance : dynRevitTransactionNodeWithOneOutput
@@ -1326,7 +1480,12 @@ namespace Dynamo.Nodes
             }
             else if (p.StorageType == StorageType.String)
             {
-                return Value.NewString(p.AsString());
+                if (!String.IsNullOrWhiteSpace(p.AsString()))
+                {
+                    return Value.NewString(p.AsString());
+                }
+                else
+                    return Value.NewString("");
             }
             else
             {
@@ -1409,22 +1568,22 @@ namespace Dynamo.Nodes
             RegisterAllPorts();
         }
 
-        private static Value setParam(FamilySymbol fi, string paramName, Value valueExpr)
+        private static Value setParam(FamilySymbol fs, string paramName, Value valueExpr)
         {
-            var p = fi.get_Parameter(paramName);
+            var p = fs.get_Parameter(paramName);
             if (p != null)
             {
-                return _setParam(fi, p, valueExpr);
+                return _setParam(fs, p, valueExpr);
             }
             throw new Exception("Parameter \"" + paramName + "\" was not found!");
         }
 
-        private static Value setParam(FamilySymbol fi, Definition paramDef, Value valueExpr)
+        private static Value setParam(FamilySymbol fs, Definition paramDef, Value valueExpr)
         {
-            var p = fi.get_Parameter(paramDef);
+            var p = fs.get_Parameter(paramDef);
             if (p != null)
             {
-                return _setParam(fi, p, valueExpr);
+                return _setParam(fs, p, valueExpr);
             }
             throw new Exception("Parameter \"" + paramDef.Name + "\" was not found!");
         }
@@ -1533,27 +1692,27 @@ namespace Dynamo.Nodes
             RegisterAllPorts();
         }
 
-        private static Value getParam(FamilySymbol fi, string paramName)
+        private static Value getParam(FamilySymbol fs, string paramName)
         {
-            var p = fi.get_Parameter(paramName);
+            var p = fs.get_Parameter(paramName);
             if (p != null)
             {
-                return _getParam(fi, p);
+                return _getParam(fs, p);
             }
             throw new Exception("Parameter \"" + paramName + "\" was not found!");
         }
 
-        private static Value getParam(FamilySymbol fi, Definition paramDef)
+        private static Value getParam(FamilySymbol fs, Definition paramDef)
         {
-            var p = fi.get_Parameter(paramDef);
+            var p = fs.get_Parameter(paramDef);
             if (p != null)
             {
-                return _getParam(fi, p);
+                return _getParam(fs, p);
             }
             throw new Exception("Parameter \"" + paramDef.Name + "\" was not found!");
         }
 
-        private static Value _getParam(FamilySymbol fi, Parameter p)
+        private static Value _getParam(FamilySymbol fs, Parameter p)
         {
             if (p.StorageType == StorageType.Double)
             {
@@ -1565,7 +1724,12 @@ namespace Dynamo.Nodes
             }
             else if (p.StorageType == StorageType.String)
             {
-                return Value.NewString(p.AsString());
+                if (!String.IsNullOrWhiteSpace(p.AsString()))
+                {
+                    return Value.NewString(p.AsString());
+                }
+                else
+                    return Value.NewString("");
             }
             else
             {
@@ -1598,9 +1762,9 @@ namespace Dynamo.Nodes
                 }
                 else
                 {
-                    var fi = (FamilySymbol)((Value.Container)input).Item;
+                    var fs = (FamilySymbol)((Value.Container)input).Item;
 
-                    return getParam(fi, paramName);
+                    return getParam(fs, paramName);
                 }
             }
             else
@@ -1625,10 +1789,64 @@ namespace Dynamo.Nodes
                 }
                 else
                 {
-                    var fi = (FamilySymbol)((Value.Container)input).Item;
+                    var fs = (FamilySymbol)((Value.Container)input).Item;
 
-                    return getParam(fi, paramDef);
+                    return getParam(fs, paramDef);
                 }
+            }
+        }
+    }
+
+    [NodeName("Family Type from Instance")]
+    [NodeCategory(BuiltinNodeCategories.REVIT_FAMILYCREATION)]
+    [NodeDescription("Returns the Family Type for a given Family Instance.")]
+    public class dynFamilyTypeFromInstance : dynRevitTransactionNodeWithOneOutput
+    {
+        public dynFamilyTypeFromInstance()
+        {
+            InPortData.Add(new PortData("fi", "Family instance.", typeof(Value.Container)));
+
+            OutPortData.Add(new PortData("ft", "Family type.", typeof(Value.Container)));
+
+            RegisterAllPorts();
+        }
+
+
+        private static Value getSymbol(FamilyInstance fi)
+        {
+
+            if (fi != null)
+            {
+                return Value.NewContainer(fi.Symbol);
+            }
+            throw new Exception("Family Symbol \"" + fi.Symbol.Name + "\" was not found!");
+        }
+
+
+        public override Value Evaluate(FSharpList<Value> args)
+        {
+
+
+            var input = args[0];
+            if (input.IsList)
+            {
+                var fiList = (input as Value.List).Item;
+                return Value.NewList(
+                   Utils.SequenceToFSharpList(
+                      fiList.Select(
+                         x =>
+                            getSymbol(
+                               (FamilyInstance)((Value.Container)x).Item
+                            )
+                      )
+                   )
+                );
+            }
+            else
+            {
+                var fi = (FamilyInstance)((Value.Container)input).Item;
+
+                return getSymbol(fi);
             }
         }
     }
