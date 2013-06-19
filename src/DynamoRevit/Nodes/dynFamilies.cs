@@ -1381,10 +1381,10 @@ namespace Dynamo.Nodes
                 var input = args[0];
                 if (input.IsList)
                 {
-                    var fiList = (input as Value.List).Item;
+                    var fsList = (input as Value.List).Item;
                     return Value.NewList(
                        Utils.SequenceToFSharpList(
-                          fiList.Select(
+                          fsList.Select(
                              x =>
                                 setParam(
                                    (FamilyInstance)((Value.Container)x).Item,
@@ -1747,10 +1747,10 @@ namespace Dynamo.Nodes
                 var input = args[0];
                 if (input.IsList)
                 {
-                    var fiList = (input as Value.List).Item;
+                    var fsList = (input as Value.List).Item;
                     return Value.NewList(
                        Utils.SequenceToFSharpList(
-                          fiList.Select(
+                          fsList.Select(
                              x =>
                                 getParam(
                                    (FamilySymbol)((Value.Container)x).Item,
@@ -1774,10 +1774,10 @@ namespace Dynamo.Nodes
                 var input = args[0];
                 if (input.IsList)
                 {
-                    var fiList = (input as Value.List).Item;
+                    var fsList = (input as Value.List).Item;
                     return Value.NewList(
                        Utils.SequenceToFSharpList(
-                          fiList.Select(
+                          fsList.Select(
                              x =>
                                 getParam(
                                    (FamilySymbol)((Value.Container)x).Item,
@@ -1830,10 +1830,10 @@ namespace Dynamo.Nodes
             var input = args[0];
             if (input.IsList)
             {
-                var fiList = (input as Value.List).Item;
+                var fsList = (input as Value.List).Item;
                 return Value.NewList(
                    Utils.SequenceToFSharpList(
-                      fiList.Select(
+                      fsList.Select(
                          x =>
                             getSymbol(
                                (FamilyInstance)((Value.Container)x).Item
