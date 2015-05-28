@@ -53,6 +53,7 @@
       <DependentUpon>HelloDynamoControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Examples\DropDown.cs" />
+    <Compile Include="Examples\FunctionCallExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Examples\CustomNodeModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
