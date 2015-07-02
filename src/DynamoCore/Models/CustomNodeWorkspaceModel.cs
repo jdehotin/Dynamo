@@ -196,23 +196,26 @@ namespace Dynamo.Models
 
         public override bool SaveAs(string newPath, ProtoCore.RuntimeCore runtimeCore, bool isBackUp = false)
         {
-            var originalPath = FileName;
-
-            // A SaveAs to an existing function id prompts the creation of a new 
-            // custom node with a new function id
-            if (originalPath != newPath)
+            if (!isBackUp)
             {
-                FileName = newPath;
-                // If it is a newly created node, no need to generate a new guid
-                if (!string.IsNullOrEmpty(originalPath))
-                    CustomNodeId = Guid.NewGuid();
+                var originalPath = FileName;
 
-                // This comes after updating the Id, as if to associate the new name
-                // with the new Id.
-                SetInfo(Path.GetFileNameWithoutExtension(newPath));
+                // A SaveAs to an existing function id prompts the creation of a new 
+                // custom node with a new function id
+                if (originalPath != newPath)
+                {
+                    FileName = newPath;
+                    // If it is a newly created node, no need to generate a new guid
+                    if (!string.IsNullOrEmpty(originalPath))
+                        CustomNodeId = Guid.NewGuid();
+
+                    // This comes after updating the Id, as if to associate the new name
+                    // with the new Id.
+                    SetInfo(Path.GetFileNameWithoutExtension(newPath));
+                }
             }
 
-            return base.SaveAs(newPath, runtimeCore);
+            return base.SaveAs(newPath, runtimeCore, isBackUp);
         }
 
         protected override bool PopulateXmlDocument(XmlDocument document)
