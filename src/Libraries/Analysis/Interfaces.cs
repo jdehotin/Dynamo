@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Autodesk.DesignScript.Geometry;
+using System;
 using System.Collections.Generic;
-
-using Autodesk.DesignScript.Geometry;
 
 namespace Analysis
 {

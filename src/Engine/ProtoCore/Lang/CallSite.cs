@@ -1,3 +1,10 @@
+using ProtoCore.DSASM;
+using ProtoCore.Exceptions;
+using ProtoCore.Lang;
+using ProtoCore.Lang.Replication;
+using ProtoCore.Properties;
+using ProtoCore.Runtime;
+using ProtoCore.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,14 +14,7 @@ using System.Reflection;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Text;
-using ProtoCore.DSASM;
-using ProtoCore.Exceptions;
-using ProtoCore.Lang;
-using ProtoCore.Lang.Replication;
-using ProtoCore.Utils;
 using StackFrame = ProtoCore.DSASM.StackFrame;
-using ProtoCore.Properties;
-using ProtoCore.Runtime;
 using WarningID = ProtoCore.Runtime.WarningID;
 
 namespace ProtoCore

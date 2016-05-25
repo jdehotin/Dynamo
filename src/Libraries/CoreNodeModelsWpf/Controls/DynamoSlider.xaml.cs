@@ -1,16 +1,11 @@
-﻿using System;
-using System.CodeDom.Compiler;
-using System.Windows;
+﻿using Dynamo.Graph.Nodes;
+using Dynamo.Graph.Workspaces;
+using Dynamo.UI;
+using Dynamo.ViewModels;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Shapes;
-using Dynamo.Graph;
-using Dynamo.Graph.Nodes;
-using Dynamo.Graph.Workspaces;
-using Dynamo.Models;
-using Dynamo.UI;
-using Dynamo.ViewModels;
 
 namespace CoreNodeModelsWpf.Controls
 {

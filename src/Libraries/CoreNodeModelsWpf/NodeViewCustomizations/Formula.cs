@@ -1,11 +1,11 @@
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Media;
 using CoreNodeModels;
 using Dynamo.Controls;
 using Dynamo.Nodes;
 using Dynamo.Wpf;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Media;
 
 namespace CoreNodeModelsWpf.Nodes
 {

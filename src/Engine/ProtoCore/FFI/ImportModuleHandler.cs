@@ -1,9 +1,9 @@
-﻿using System;
+﻿using ProtoCore.AST.AssociativeAST;
+using ProtoCore.Properties;
+using ProtoCore.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using ProtoCore.AST.AssociativeAST;
-using ProtoCore.Utils;
-using ProtoCore.Properties;
 using System.Reflection;
 using System.Text;
 

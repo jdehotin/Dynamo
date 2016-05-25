@@ -1,18 +1,15 @@
-﻿using System;
+﻿using Dynamo.Graph.Nodes.CustomNodes;
+using Dynamo.Graph.Nodes.ZeroTouch;
+using Dynamo.Graph.Workspaces;
+using Dynamo.Models;
+using Dynamo.Search.SearchElements;
+using Dynamo.Wpf.ViewModels;
+using NUnit.Framework;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
-using Dynamo.Graph;
-using Dynamo.Graph.Nodes.CustomNodes;
-using Dynamo.Graph.Nodes.ZeroTouch;
-using Dynamo.Graph.Workspaces;
-using Dynamo.Models;
-using Dynamo.Nodes;
-using Dynamo.Search.SearchElements;
-using Dynamo.Wpf.ViewModels;
-
-using NUnit.Framework;
 
 namespace Dynamo.Tests
 {

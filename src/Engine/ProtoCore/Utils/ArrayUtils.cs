@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ProtoCore.DSASM;
+﻿using ProtoCore.DSASM;
 using ProtoCore.Exceptions;
 using ProtoCore.Runtime;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProtoCore.Utils
 {

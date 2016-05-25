@@ -1,15 +1,15 @@
-using System;
-using System.IO;
-using System.Collections.Generic;
-using ProtoCore;
-using ProtoCore.AST.AssociativeAST;
-using ProtoCore.Utils;
-using ProtoCore.DSASM;
-using System.Text;
-using ProtoCore.AssociativeGraph;
-using ProtoCore.BuildData;
-using System.Linq;
 using ProtoAssociative.Properties;
+using ProtoCore;
+using ProtoCore.AssociativeGraph;
+using ProtoCore.AST.AssociativeAST;
+using ProtoCore.BuildData;
+using ProtoCore.DSASM;
+using ProtoCore.Utils;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
 
 namespace ProtoAssociative
 {

@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Autodesk.DesignScript.Runtime;
+﻿using Autodesk.DesignScript.Runtime;
 using CoreNodeModels.Properties;
 using Dynamo.Graph.Nodes;
 using ProtoCore.AST.AssociativeAST;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CoreNodeModels.HigherOrder
 {

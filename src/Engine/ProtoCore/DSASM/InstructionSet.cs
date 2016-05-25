@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ProtoCore.Exceptions;
 using ProtoCore.Utils;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using Operand = ProtoCore.DSASM.StackValue;
-using ProtoCore.Exceptions;
 
 namespace ProtoCore.DSASM
 {

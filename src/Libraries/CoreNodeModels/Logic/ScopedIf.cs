@@ -1,13 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
+﻿using CoreNodeModels.Properties;
 using Dynamo.Engine.CodeGeneration;
-using CoreNodeModels.Properties;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph.Nodes.CustomNodes;
 using ProtoCore;
 using ProtoCore.AST.AssociativeAST;
-
+using System.Collections.Generic;
+using System.Linq;
 using CodeBlockNode = ProtoCore.AST.AssociativeAST.CodeBlockNode;
 using LanguageBlockNode = ProtoCore.AST.AssociativeAST.LanguageBlockNode;
 

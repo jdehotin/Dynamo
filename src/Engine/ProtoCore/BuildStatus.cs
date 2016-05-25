@@ -1,8 +1,8 @@
+using ProtoCore.DSASM;
+using ProtoCore.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using ProtoCore.DSASM;
-using ProtoCore.Properties;
 
 namespace ProtoCore
 {

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Dynamo.Configuration;
+using System;
 using System.Globalization;
 using System.Windows.Data;
-using Dynamo.Configuration;
 
 namespace CoreNodeModelsWpf.Converters
 {

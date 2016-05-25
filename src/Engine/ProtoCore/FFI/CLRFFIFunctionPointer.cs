@@ -1,13 +1,12 @@
-﻿using System;
-using System.Linq;
+﻿using Autodesk.DesignScript.Runtime;
+using ProtoCore.DSASM;
+using ProtoCore.Exceptions;
+using ProtoCore.Properties;
+using ProtoCore.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using ProtoCore.DSASM;
-using ProtoCore.Utils;
-using Autodesk.DesignScript.Runtime;
-using ProtoCore.Properties;
-using ProtoCore.Exceptions;
 
 namespace ProtoFFI
 {

@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using CoreNodeModels;
+﻿using CoreNodeModels;
 using Dynamo.Controls;
-using Dynamo.Models;
 using Dynamo.Core;
-using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph.Workspaces;
 using Dynamo.UI.Commands;
 using Dynamo.ViewModels;
 using DynamoConversions;
+using System.Collections.Generic;
 
 namespace CoreNodeModelsWpf
 {

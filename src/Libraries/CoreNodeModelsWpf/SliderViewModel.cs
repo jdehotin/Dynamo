@@ -1,9 +1,6 @@
-﻿using System;
-using System.Globalization;
-
-using CoreNodeModels.Input;
-
+﻿using CoreNodeModels.Input;
 using Dynamo.Core;
+using System;
 
 namespace CoreNodeModelsWpf
 {

@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Dynamo.Logging;
+﻿using Dynamo.Logging;
+using System.Collections.Generic;
 
 namespace CoreNodeModels
 {

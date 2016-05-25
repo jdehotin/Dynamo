@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml;
-using CoreNodeModels.Properties;
+﻿using CoreNodeModels.Properties;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Dynamo.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml;
 
 namespace CoreNodeModels
 {

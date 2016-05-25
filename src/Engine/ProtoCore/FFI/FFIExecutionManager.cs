@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using Autodesk.DesignScript.Interfaces;
+﻿using Autodesk.DesignScript.Interfaces;
 using ProtoCore;
 using ProtoCore.Utils;
+using System;
+using System.Collections.Generic;
+using System.Reflection;
 using SysType = System.Type;
 
 namespace ProtoFFI

@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using ProtoCore.AST;
+﻿using ProtoCore.AST;
 using ProtoCore.AST.AssociativeAST;
 using ProtoCore.DSASM;
 using ProtoCore.SyntaxAnalysis;
 using ProtoCore.Utils;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProtoCore.Namespace
 {

@@ -1,18 +1,16 @@
+using Autodesk.DesignScript.Interfaces;
+using ProtoCore.DSASM;
+using ProtoCore.Exceptions;
+using ProtoCore.Properties;
+using ProtoCore.Utils;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using ProtoCore.DSASM;
-using ProtoCore.Utils;
-using System.Reflection;
 using System.ComponentModel;
-using Autodesk.DesignScript.Interfaces;
-using System.Xml.Serialization;
-using System.Text;
 using System.IO;
-using System.Xml;
 using System.Linq;
-using ProtoCore.Properties;
-using ProtoCore.Exceptions;
+using System.Reflection;
+using System.Xml;
 
 namespace ProtoFFI
 {

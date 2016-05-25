@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-
+﻿using CoreNodeModels.Properties;
 using DSCore;
-using CoreNodeModels.Properties;
-using ProtoCore.AST.AssociativeAST;
-using ProtoCore.Mirror;
-using System.Globalization;
-
 using Dynamo.Engine;
 using Dynamo.Graph.Nodes;
+using ProtoCore.AST.AssociativeAST;
+using ProtoCore.Mirror;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
+using System.Linq;
 
 namespace CoreNodeModels
 {

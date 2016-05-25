@@ -1,10 +1,9 @@
-﻿using System.Linq;
+﻿using Dynamo.Graph.Nodes;
 using Dynamo.Properties;
 using ProtoCore.AST.AssociativeAST;
-
-using System.Collections.Generic;
-using Dynamo.Graph.Nodes;
 using ProtoCore.DSASM;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CoreNodeModels
 {

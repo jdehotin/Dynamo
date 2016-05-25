@@ -1,7 +1,7 @@
-﻿using System.Linq;
+﻿using ProtoCore.AST;
 using ProtoCore.AST.ImperativeAST;
-using ProtoCore.AST;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ProtoCore.SyntaxAnalysis
 {

@@ -1,5 +1,5 @@
-﻿using System;
-using ProtoCore.DSASM;
+﻿using ProtoCore.DSASM;
+using System;
 
 namespace ProtoCore.Lang
 {

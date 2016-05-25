@@ -1,8 +1,8 @@
 ﻿
-using System.Collections.Generic;
 using ProtoCore.DSASM;
 using ProtoCore.Lang.Replication;
 using ProtoCore.Utils;
+using System.Collections.Generic;
 
 namespace ProtoCore.Lang
 {

@@ -1458,7 +1458,7 @@ namespace Dynamo.ViewModels
             else
             {
                 //trigger the event to request the display
-                //of the preset name dialogue
+                //of the preset name dialog
                 var args = new PresetsNamePromptEventArgs();
                 this.Model.OnRequestPresetNamePrompt(args);
 

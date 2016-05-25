@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CoreNodeModels.Properties;
+﻿using CoreNodeModels.Properties;
 using Dynamo.Engine;
 using Dynamo.Graph.Nodes;
 using Dynamo.Scheduler;
 using Dynamo.Visualization;
 using ProtoCore.AST.AssociativeAST;
+using System.Collections.Generic;
 
 namespace CoreNodeModels
 {

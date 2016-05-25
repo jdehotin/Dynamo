@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using ProtoCore.DSASM;
+﻿using ProtoCore.DSASM;
 using ProtoCore.DSASM.Mirror;
 using ProtoCore.Lang;
 using ProtoCore.Utils;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
 namespace ProtoScript.Runners
 {

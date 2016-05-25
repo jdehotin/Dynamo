@@ -1,10 +1,7 @@
-﻿using System;
+﻿using ProtoCore.AST.AssociativeAST;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Reflection;
-using Autodesk.DesignScript.Interfaces;
-using ProtoCore.AST.AssociativeAST;
 
 namespace ProtoFFI
 {

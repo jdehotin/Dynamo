@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using ProtoCore.AST.AssociativeAST;
 using ProtoCore.DSASM;
-using ProtoCore.AST.AssociativeAST;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace ProtoCore.Utils
 {

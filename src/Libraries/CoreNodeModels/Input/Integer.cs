@@ -1,7 +1,7 @@
-﻿using System;
+﻿using ProtoCore.AST.AssociativeAST;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
-using ProtoCore.AST.AssociativeAST;
 
 namespace CoreNodeModels.Input
 {
