@@ -9,7 +9,7 @@ using ProtoImperative.Properties;
 
 namespace ProtoImperative
 {
-    public class BackpatchMap
+	public class BackpatchMap
 	{
 		public BackpatchMap()
 		{
