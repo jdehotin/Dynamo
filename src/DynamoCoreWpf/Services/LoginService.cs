@@ -1,10 +1,10 @@
 ﻿using System;
+using System.Reflection;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
-using System.Reflection;
-using Shapeways=ShapewaysClient.ShapewaysClient;
 using Dynamo.Wpf.Properties;
+using Shapeways = ShapewaysClient.ShapewaysClient;
 
 namespace Dynamo.Wpf.Authentication
 {

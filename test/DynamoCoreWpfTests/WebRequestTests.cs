@@ -2,17 +2,13 @@
 using System.Diagnostics;
 using System.IO;
 using System.Net;
-
-using SystemTestServices;
-using Dynamo.Graph;
+using Dynamo.Graph.Nodes.ZeroTouch;
 using Dynamo.Graph.Workspaces;
 using Dynamo.Models;
 using Dynamo.Tests;
-
 using NUnit.Framework;
-
+using SystemTestServices;
 using WebRequest = CoreNodeModels.WebRequest;
-using Dynamo.Graph.Nodes.ZeroTouch;
 
 namespace DynamoCoreWpfTests
 {

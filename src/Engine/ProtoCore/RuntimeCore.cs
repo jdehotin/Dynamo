@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using ProtoCore.AssociativeGraph;
 using ProtoCore.DSASM;
 using ProtoCore.Lang;
@@ -5,10 +9,6 @@ using ProtoCore.Lang.Replication;
 using ProtoCore.Runtime;
 using ProtoCore.Utils;
 using ProtoFFI;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 
 namespace ProtoCore
 {

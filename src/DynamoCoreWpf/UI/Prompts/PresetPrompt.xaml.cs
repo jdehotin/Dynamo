@@ -1,9 +1,8 @@
 ﻿using System.Linq;
 using System.Windows;
-using Dynamo.Controls;
-using Dynamo.Utilities; 
-using System;
 using System.Windows.Controls;
+using Dynamo.Controls;
+using Dynamo.Utilities;
 using Dynamo.ViewModels;
 
 namespace Dynamo.Nodes

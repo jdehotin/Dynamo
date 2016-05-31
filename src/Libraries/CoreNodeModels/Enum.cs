@@ -1,9 +1,9 @@
-﻿using Dynamo.Utilities;
-using ProtoCore.AST.AssociativeAST;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Dynamo.Utilities;
+using ProtoCore.AST.AssociativeAST;
 
 namespace CoreNodeModels
 {

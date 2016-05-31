@@ -1,12 +1,12 @@
 
 //#define ENABLE_INC_DEC_FIX
+using System;
+using System.Collections.Generic;
 using ProtoCore.AST;
 using ProtoCore.AST.AssociativeAST;
 using ProtoCore.DSASM;
 using ProtoCore.Properties;
 using ProtoCore.Utils;
-using System;
-using System.Collections.Generic;
 
 namespace ProtoCore.DesignScriptParser
 {

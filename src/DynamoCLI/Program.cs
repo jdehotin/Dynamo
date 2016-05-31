@@ -1,7 +1,7 @@
 ﻿using System;
 using Dynamo.Applications;
-using Dynamo.Models;
 using Dynamo.Logging;
+using Dynamo.Models;
 
 namespace DynamoCLI
 {

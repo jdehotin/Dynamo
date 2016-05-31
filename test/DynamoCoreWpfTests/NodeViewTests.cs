@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
+using System.Windows.Input;
 using Dynamo.Selection;
 using DynamoCoreWpfTests.Utility;
 using NUnit.Framework;
-using System.Windows.Input;
 
 namespace DynamoCoreWpfTests
 {

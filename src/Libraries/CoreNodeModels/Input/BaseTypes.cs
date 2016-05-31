@@ -1,12 +1,4 @@
-﻿using CoreNodeModels.Properties;
-using Dynamo.Engine.CodeGeneration;
-using Dynamo.Graph;
-using Dynamo.Graph.Nodes;
-using Dynamo.Migration;
-using Dynamo.Utilities;
-using ProtoCore.AST.AssociativeAST;
-using ProtoCore.DSASM;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
@@ -14,6 +6,14 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Xml;
+using CoreNodeModels.Properties;
+using Dynamo.Engine.CodeGeneration;
+using Dynamo.Graph;
+using Dynamo.Graph.Nodes;
+using Dynamo.Migration;
+using Dynamo.Utilities;
+using ProtoCore.AST.AssociativeAST;
+using ProtoCore.DSASM;
 
 namespace CoreNodeModels.Input
 {

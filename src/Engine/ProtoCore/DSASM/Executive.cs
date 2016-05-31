@@ -1,12 +1,12 @@
-﻿using ProtoCore.Exceptions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using ProtoCore.Exceptions;
 using ProtoCore.Lang.Replication;
 using ProtoCore.Properties;
 using ProtoCore.Runtime;
 using ProtoCore.Utils;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ProtoCore.DSASM
 {

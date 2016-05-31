@@ -2,10 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using NUnit.Framework;
+using ProtoCore.DSASM.Mirror;
 using ProtoCore.Lang;
 using ProtoScript.Runners;
-using ProtoCore.DSASM.Mirror;
-using ProtoTestFx.TD;
 using ProtoTestFx;
 namespace ProtoTest.TD
 {

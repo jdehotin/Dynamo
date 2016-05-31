@@ -1,9 +1,9 @@
-﻿using System.Linq;
-using NUnit.Framework;
-using Dynamo.Selection;
-using System.IO;
+﻿using System.IO;
+using System.Linq;
 using Dynamo.Graph.Nodes.ZeroTouch;
 using Dynamo.Graph.Workspaces;
+using Dynamo.Selection;
+using NUnit.Framework;
 
 namespace Dynamo.Tests
 {

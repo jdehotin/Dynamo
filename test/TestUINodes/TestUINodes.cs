@@ -1,15 +1,10 @@
-﻿using Autodesk.DesignScript.Runtime;
-using Dynamo.Models;
-using Dynamo.Nodes;
-using ProtoCore.AST.AssociativeAST;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Dynamo.Graph;
+using Autodesk.DesignScript.Runtime;
 using Dynamo.Graph.Nodes;
+using ProtoCore.AST.AssociativeAST;
 
-namespace TestUINodes 
+namespace TestUINodes
 {
     [NodeName("NodeWithFailingASTOutput")]
     [NodeCategory("TestUINodes")]

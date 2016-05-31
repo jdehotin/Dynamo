@@ -1,6 +1,5 @@
 ﻿using System;
 using Dynamo.Engine;
-using Dynamo.Interfaces;
 using ProtoCore.AST.AssociativeAST;
 
 namespace Dynamo.Library

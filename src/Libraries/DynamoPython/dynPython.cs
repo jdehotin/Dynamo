@@ -1,8 +1,8 @@
-﻿using Dynamo.Graph.Nodes;
-using Dynamo.Migration;
-using System.Linq;
+﻿using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
+using Dynamo.Graph.Nodes;
+using Dynamo.Migration;
 
 namespace Dynamo.Nodes
 {

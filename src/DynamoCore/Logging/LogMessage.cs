@@ -1,5 +1,4 @@
 ﻿using System;
-using Dynamo.Interfaces;
 
 namespace Dynamo.Logging
 {

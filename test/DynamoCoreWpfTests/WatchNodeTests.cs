@@ -1,15 +1,15 @@
-﻿using Dynamo.Interfaces;
-using NUnit.Framework;
+﻿using System.Collections.Generic;
 using System.IO;
-using Dynamo.ViewModels;
-using ProtoCore.Mirror;
-using System.Collections.Generic;
 using System.Linq;
 using CoreNodeModels;
 using Dynamo.Graph.Nodes;
+using Dynamo.Interfaces;
 using Dynamo.Tests;
+using Dynamo.ViewModels;
+using NUnit.Framework;
+using ProtoCore.Mirror;
 
-namespace DynamoCoreWpfTests 
+namespace DynamoCoreWpfTests
 {
     [Category("DSExecution")]
     class WatchNodeTests : DynamoViewModelUnitTest

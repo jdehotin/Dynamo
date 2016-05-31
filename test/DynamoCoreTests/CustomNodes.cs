@@ -1,20 +1,19 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
-using Dynamo.Models;
-using Dynamo.Selection;
-
-using NUnit.Framework;
-using System.Collections;
 using CoreNodeModels;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Dynamo.Graph.Nodes.CustomNodes;
 using Dynamo.Graph.Nodes.ZeroTouch;
-using Dynamo.Graph.Workspaces;
 using Dynamo.Graph.Notes;
+using Dynamo.Graph.Workspaces;
+using Dynamo.Models;
+using Dynamo.Selection;
+using NUnit.Framework;
 
 namespace Dynamo.Tests
 {

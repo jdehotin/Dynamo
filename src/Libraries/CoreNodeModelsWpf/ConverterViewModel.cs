@@ -1,4 +1,5 @@
-﻿using CoreNodeModels;
+﻿using System.Collections.Generic;
+using CoreNodeModels;
 using Dynamo.Controls;
 using Dynamo.Core;
 using Dynamo.Graph.Nodes;
@@ -6,7 +7,6 @@ using Dynamo.Graph.Workspaces;
 using Dynamo.UI.Commands;
 using Dynamo.ViewModels;
 using DynamoConversions;
-using System.Collections.Generic;
 
 namespace CoreNodeModelsWpf
 {

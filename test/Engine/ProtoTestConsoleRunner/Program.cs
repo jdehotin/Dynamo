@@ -1,8 +1,7 @@
 ﻿using System;
+using System.IO;
 using ProtoCore;
 using ProtoScript.Runners;
-using ProtoCore.DSASM.Mirror;
-using System.IO;
 
 namespace ProtoTestConsoleRunner
 {

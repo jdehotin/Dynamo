@@ -1,10 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 
 using Dynamo.Core;
-using Dynamo.Search.SearchElements;
-using ProtoCore.AST.AssociativeAST;
 
 
 namespace Dynamo.Search

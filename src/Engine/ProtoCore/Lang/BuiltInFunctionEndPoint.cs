@@ -1,14 +1,14 @@
-﻿using ProtoCore.DSASM;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using ProtoCore.DSASM;
 using ProtoCore.Exceptions;
 using ProtoCore.Lang.Replication;
 using ProtoCore.Properties;
 using ProtoCore.Runtime;
 using ProtoCore.Utils;
 using ProtoFFI;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 
 namespace ProtoCore.Lang
 {

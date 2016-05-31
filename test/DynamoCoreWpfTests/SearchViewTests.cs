@@ -1,13 +1,13 @@
-﻿using Dynamo.Utilities;
-using DynamoCoreWpfTests.Utility;
-using NUnit.Framework;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using Dynamo.Search;
 using Dynamo.UI.Views;
+using Dynamo.Utilities;
 using Dynamo.Wpf.ViewModels;
+using DynamoCoreWpfTests.Utility;
+using NUnit.Framework;
 
 namespace DynamoCoreWpfTests
 {

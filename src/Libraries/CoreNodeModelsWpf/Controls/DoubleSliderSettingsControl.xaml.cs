@@ -1,7 +1,7 @@
-﻿using Dynamo.Controls;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using Dynamo.Controls;
 
 namespace CoreNodeModelsWpf
 {

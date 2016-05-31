@@ -1,5 +1,3 @@
-using System;
-
 namespace Dynamo.Search.SearchElements
 
 {

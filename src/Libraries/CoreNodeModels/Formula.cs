@@ -1,12 +1,12 @@
-﻿using Dynamo.Graph;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Xml;
+using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using NCalc;
 using ProtoCore;
 using ProtoCore.AST.AssociativeAST;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Xml;
 using Expression = NCalc.Expression;
 
 namespace CoreNodeModels

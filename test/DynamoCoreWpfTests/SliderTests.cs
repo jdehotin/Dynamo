@@ -4,7 +4,6 @@ using System.Reflection;
 
 using CoreNodeModels.Input;
 using Dynamo.Graph;
-using Dynamo.Models;
 using NUnit.Framework;
 using DoubleSlider = CoreNodeModels.Input.DoubleSlider;
 

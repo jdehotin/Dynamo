@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using Dynamo.Models;
 using Dynamo.Migration;
 
 namespace Dynamo.Nodes

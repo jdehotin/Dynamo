@@ -1,9 +1,9 @@
-﻿using ProtoCore.DSASM;
+﻿using System.Collections.Generic;
+using ProtoCore.DSASM;
 using ProtoCore.Exceptions;
 using ProtoCore.Properties;
 using ProtoCore.Runtime;
 using ProtoCore.Utils;
-using System.Collections.Generic;
 
 namespace ProtoCore.Lang
 {

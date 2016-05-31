@@ -1,12 +1,12 @@
-﻿using CoreNodeModels;
+﻿using System;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows;
+using CoreNodeModels;
 using Dynamo.Controls;
 using Dynamo.Graph.Nodes;
 using Dynamo.Utilities;
 using Dynamo.Wpf;
-using System;
-using System.ComponentModel;
-using System.Drawing;
-using System.Windows;
 using Image = System.Windows.Controls.Image;
 
 namespace CoreNodeModelsWpf.Nodes

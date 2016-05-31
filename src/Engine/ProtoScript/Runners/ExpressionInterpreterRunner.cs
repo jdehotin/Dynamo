@@ -1,6 +1,6 @@
-﻿using ProtoCore.DSASM;
+﻿using System;
+using ProtoCore.DSASM;
 using ProtoCore.DSASM.Mirror;
-using System;
 
 namespace ProtoScript.Runners
 {

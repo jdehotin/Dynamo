@@ -1,8 +1,8 @@
-﻿using Dynamo.Graph;
-using Dynamo.Graph.Nodes;
-using System;
+﻿using System;
 using System.Linq;
 using System.Xml;
+using Dynamo.Graph;
+using Dynamo.Graph.Nodes;
 
 namespace CoreNodeModels.Input
 {

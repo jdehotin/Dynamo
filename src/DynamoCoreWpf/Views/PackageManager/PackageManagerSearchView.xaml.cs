@@ -1,10 +1,9 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using Dynamo.PackageManager.ViewModels;
 using Dynamo.UI;
 using Dynamo.ViewModels;
-using Dynamo.PackageManager.ViewModels;
 
 namespace Dynamo.PackageManager.UI
 {

@@ -1,10 +1,10 @@
 ﻿using System.Windows;
 using Dynamo.UI.Controls;
 using Dynamo.Updates;
+using DynamoCoreWpfTests.Utility;
 using Moq;
 using NUnit.Framework;
 using SystemTestServices;
-using DynamoCoreWpfTests.Utility;
 
 namespace DynamoCoreWpfTests
 {

@@ -1,9 +1,9 @@
-﻿using ProtoCore.AST.AssociativeAST;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ProtoCore.AST.AssociativeAST;
 using ProtoCore.DSASM;
 using ProtoCore.Properties;
 using ProtoCore.Utils;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace ProtoCore.Lang
 {

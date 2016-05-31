@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Linq;
 using Dynamo.Core;
-using Dynamo.Selection;
-using Dynamo.Utilities;
 using Dynamo.Engine;
 using Dynamo.Engine.NodeToCode;
 using Dynamo.Graph;
@@ -14,6 +11,8 @@ using Dynamo.Graph.Nodes;
 using Dynamo.Graph.Nodes.ZeroTouch;
 using Dynamo.Graph.Notes;
 using Dynamo.Graph.Workspaces;
+using Dynamo.Selection;
+using Dynamo.Utilities;
 
 namespace Dynamo.Models
 {

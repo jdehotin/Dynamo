@@ -4,15 +4,11 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Reflection.Emit;
-using System.Text;
 using System.Xml.Serialization;
 using Dynamo.Configuration;
 using Dynamo.Interfaces;
 using Dynamo.Models;
 using Dynamo.Updates;
-using ProtoCore.AST.AssociativeAST;
-using ProtoCore.Lang;
 
 namespace Dynamo.Core
 {

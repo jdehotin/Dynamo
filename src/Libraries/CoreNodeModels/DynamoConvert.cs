@@ -1,11 +1,11 @@
-﻿using Dynamo.Graph;
+﻿using System;
+using System.Collections.Generic;
+using System.Xml;
+using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
 using Dynamo.Utilities;
 using DynamoConversions;
 using ProtoCore.AST.AssociativeAST;
-using System;
-using System.Collections.Generic;
-using System.Xml;
 
 namespace CoreNodeModels
 {

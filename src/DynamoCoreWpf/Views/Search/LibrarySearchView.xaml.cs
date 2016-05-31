@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Threading;
-using Dynamo.Search;
 using Dynamo.Utilities;
 using Dynamo.ViewModels;
-using Dynamo.Wpf.ViewModels;
-using Dynamo.Search.SearchElements;
 using Dynamo.Wpf.Utilities;
+using Dynamo.Wpf.ViewModels;
 
 namespace Dynamo.UI.Views
 {

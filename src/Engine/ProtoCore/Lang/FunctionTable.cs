@@ -1,6 +1,6 @@
 ﻿
-using ProtoCore.Utils;
 using System.Collections.Generic;
+using ProtoCore.Utils;
 
 namespace ProtoCore.Lang
 {

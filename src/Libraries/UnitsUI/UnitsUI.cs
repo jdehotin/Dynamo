@@ -7,10 +7,8 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 using System.Xml;
-
-using DSCore;
-
 using CoreNodeModels;
+using DSCore;
 using Dynamo.Controls;
 using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
@@ -19,7 +17,6 @@ using Dynamo.Nodes;
 using Dynamo.UI.Prompts;
 using Dynamo.ViewModels;
 using Dynamo.Wpf;
-
 using DynamoUnits;
 using ProtoCore.AST.AssociativeAST;
 using UnitsUI.Properties;

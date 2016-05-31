@@ -1,11 +1,7 @@
 ﻿using System.Collections.Generic;
-
-using SystemTestServices;
-
 using CoreNodeModels;
-
-using Dynamo.Nodes;
 using NUnit.Framework;
+using SystemTestServices;
 
 namespace DynamoCoreWpfTests
 {

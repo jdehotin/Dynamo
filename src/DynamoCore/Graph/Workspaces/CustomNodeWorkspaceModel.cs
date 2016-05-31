@@ -10,7 +10,6 @@ using Dynamo.Graph.Nodes.CustomNodes;
 using Dynamo.Graph.Nodes.NodeLoaders;
 using Dynamo.Graph.Notes;
 using Dynamo.Graph.Presets;
-using Dynamo.Interfaces;
 using ProtoCore.Namespace;
 
 namespace Dynamo.Graph.Workspaces

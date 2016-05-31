@@ -1,12 +1,12 @@
-﻿using CoreNodeModels.Input;
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using CoreNodeModels.Input;
 using Dynamo.Controls;
 using Dynamo.Nodes;
 using Dynamo.UI.Prompts;
 using Dynamo.ViewModels;
 using Dynamo.Wpf;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
 using Binding = System.Windows.Data.Binding;
 using VerticalAlignment = System.Windows.VerticalAlignment;
 

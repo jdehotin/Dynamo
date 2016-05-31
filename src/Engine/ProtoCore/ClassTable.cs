@@ -1,9 +1,9 @@
-﻿using ProtoCore.AST.AssociativeAST;
-using ProtoCore.Properties;
-using ProtoCore.Utils;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using ProtoCore.AST.AssociativeAST;
+using ProtoCore.Properties;
+using ProtoCore.Utils;
 
 namespace ProtoCore.DSASM
 {

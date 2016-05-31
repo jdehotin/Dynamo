@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
-using Dynamo;
-using Dynamo.Interfaces;
-using Dynamo.Utilities;
 using Dynamo.Logging;
 using ICSharpCode.AvalonEdit.CodeCompletion;
-using IronPython.Hosting;
 using IronPython.Runtime;
 using IronPython.Runtime.Types;
+using Microsoft.Scripting;
 using Microsoft.Scripting.Actions;
 using Microsoft.Scripting.Hosting;
-using Microsoft.Scripting;
-using System.Reflection;
 
 namespace Dynamo.Python
 {

@@ -1,4 +1,10 @@
-﻿using Dynamo.Core;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Xml;
+using Dynamo.Core;
 using Dynamo.Engine;
 using Dynamo.Graph.Annotations;
 using Dynamo.Graph.Nodes;
@@ -9,12 +15,6 @@ using Dynamo.Models;
 using Dynamo.Scheduler;
 using ProtoCore;
 using ProtoCore.Namespace;
-using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Xml;
 
 namespace Dynamo.Graph.Workspaces
 {

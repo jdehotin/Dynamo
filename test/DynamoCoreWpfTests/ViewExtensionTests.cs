@@ -1,8 +1,7 @@
-﻿using Dynamo.Wpf.Extensions;
-using NUnit.Framework;
-using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Windows;
+using Dynamo.Wpf.Extensions;
+using NUnit.Framework;
 
 namespace DynamoCoreWpfTests
 {

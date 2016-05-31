@@ -1,12 +1,12 @@
-﻿using CoreNodeModels.Input;
-using Dynamo.Controls;
-using Dynamo.ViewModels;
-using Dynamo.Wpf;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
 using System.Windows.Data;
+using CoreNodeModels.Input;
+using Dynamo.Controls;
+using Dynamo.ViewModels;
+using Dynamo.Wpf;
 
 namespace CoreNodeModelsWpf.Nodes
 {

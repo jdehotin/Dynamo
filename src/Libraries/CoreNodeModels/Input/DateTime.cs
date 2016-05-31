@@ -1,9 +1,9 @@
-﻿using Dynamo.Configuration;
-using Dynamo.Graph.Nodes;
-using ProtoCore.AST.AssociativeAST;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using Dynamo.Configuration;
+using Dynamo.Graph.Nodes;
+using ProtoCore.AST.AssociativeAST;
 
 namespace CoreNodeModels.Input
 {

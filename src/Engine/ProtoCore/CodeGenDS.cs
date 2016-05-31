@@ -1,6 +1,6 @@
+using System.Collections.Generic;
 using ProtoCore.AST.AssociativeAST;
 using ProtoCore.Utils;
-using System.Collections.Generic;
 
 namespace ProtoCore
 {

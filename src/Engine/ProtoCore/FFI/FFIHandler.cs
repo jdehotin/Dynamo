@@ -1,7 +1,7 @@
-﻿using ProtoCore.AST.AssociativeAST;
-using ProtoCore.DSASM;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ProtoCore.AST.AssociativeAST;
+using ProtoCore.DSASM;
 
 namespace ProtoFFI
 {

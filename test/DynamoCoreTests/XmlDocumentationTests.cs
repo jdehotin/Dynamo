@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Xml;
-using System.IO;
-
 using Dynamo.Engine;
 using Dynamo.Library;
-
 using NUnit.Framework;
 using ProtoCore;
 

@@ -1,8 +1,8 @@
-﻿using Dynamo.Wpf.Properties;
-using DynamoConversions;
-using System;
+﻿using System;
 using System.Globalization;
 using System.Windows.Data;
+using Dynamo.Wpf.Properties;
+using DynamoConversions;
 
 namespace Dynamo.Controls
 {

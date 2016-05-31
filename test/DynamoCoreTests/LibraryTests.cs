@@ -1,14 +1,12 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-
+using System.Xml;
 using Dynamo.Core;
 using Dynamo.Engine;
-
 using NUnit.Framework;
 using ProtoCore;
 using TestServices;
-using System.Xml;
 
 namespace Dynamo.Tests
 {

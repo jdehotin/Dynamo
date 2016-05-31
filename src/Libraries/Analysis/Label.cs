@@ -1,7 +1,7 @@
-﻿using Autodesk.DesignScript.Geometry;
+﻿using System;
+using Autodesk.DesignScript.Geometry;
 using Autodesk.DesignScript.Interfaces;
 using Autodesk.DesignScript.Runtime;
-using System;
 
 namespace Analysis
 {

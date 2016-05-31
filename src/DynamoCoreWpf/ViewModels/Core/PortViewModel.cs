@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows;
-using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-using Dynamo.Models;
 using Dynamo.Utilities;
 
 namespace Dynamo.ViewModels

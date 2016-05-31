@@ -1,3 +1,10 @@
+using System;
+using System.ComponentModel;
+using System.Threading;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Threading;
 using CoreNodeModels;
 using Dynamo.Configuration;
 using Dynamo.Controls;
@@ -8,13 +15,6 @@ using Dynamo.Scheduler;
 using Dynamo.ViewModels;
 using Dynamo.Wpf;
 using ProtoCore.AST.AssociativeAST;
-using System;
-using System.ComponentModel;
-using System.Threading;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Threading;
 
 namespace CoreNodeModelsWpf.Nodes
 {

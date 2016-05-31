@@ -3,7 +3,6 @@ using System.IO;
 using System.Text;
 using Dynamo.Configuration;
 using Dynamo.Core;
-using Dynamo.Interfaces;
 
 namespace Dynamo.Logging
 {

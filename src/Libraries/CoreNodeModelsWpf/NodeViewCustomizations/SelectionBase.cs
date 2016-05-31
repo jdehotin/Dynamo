@@ -1,8 +1,8 @@
+using System;
 using CoreNodeModels;
 using Dynamo.Controls;
 using Dynamo.Wpf;
 using Microsoft.Practices.Prism.Commands;
-using System;
 
 namespace CoreNodeModelsWpf.Nodes
 {

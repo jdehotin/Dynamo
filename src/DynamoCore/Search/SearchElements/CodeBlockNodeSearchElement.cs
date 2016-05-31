@@ -1,7 +1,5 @@
 ﻿using Dynamo.Engine;
-using Dynamo.Graph;
 using Dynamo.Graph.Nodes;
-using Dynamo.Models;
 
 namespace Dynamo.Search.SearchElements
 {

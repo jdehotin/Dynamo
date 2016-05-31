@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using ProtoCore;
 using ProtoCore.AssociativeGraph;
 using ProtoCore.AST.AssociativeAST;
@@ -6,10 +10,6 @@ using ProtoCore.DSASM.Mirror;
 using ProtoCore.Mirror;
 using ProtoCore.Utils;
 using ProtoFFI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ProtoScript.Runners
 {

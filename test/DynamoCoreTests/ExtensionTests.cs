@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using Dynamo.Scheduler;
-using NUnit.Framework;
-using Dynamo.Extensions;
 using System.IO;
+using System.Linq;
+using Dynamo.Extensions;
 using Dynamo.Models;
+using Dynamo.Scheduler;
 using Moq;
+using NUnit.Framework;
 
 namespace Dynamo.Tests
 {

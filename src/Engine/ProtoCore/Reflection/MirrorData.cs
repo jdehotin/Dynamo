@@ -1,10 +1,10 @@
-﻿using Autodesk.DesignScript.Interfaces;
-using ProtoCore.DSASM;
-using ProtoCore.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Autodesk.DesignScript.Interfaces;
+using ProtoCore.DSASM;
+using ProtoCore.Utils;
 
 namespace ProtoCore
 {

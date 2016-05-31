@@ -8,7 +8,7 @@ using Dynamo.Wpf.ViewModels.Watch3D;
 
 namespace Dynamo.Manipulation
 {
-    
+
     /// <summary>
     /// Translation Gizmo, that handles translation.
     /// </summary>

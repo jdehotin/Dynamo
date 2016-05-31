@@ -1,16 +1,16 @@
-﻿using Autodesk.DesignScript.Runtime;
-using CoreNodeModels.Properties;
-using Dynamo.Engine.CodeGeneration;
-using Dynamo.Graph;
-using Dynamo.Graph.Nodes;
-using ProtoCore.AST.AssociativeAST;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Xml;
+using Autodesk.DesignScript.Runtime;
+using CoreNodeModels.Properties;
+using Dynamo.Engine.CodeGeneration;
+using Dynamo.Graph;
+using Dynamo.Graph.Nodes;
+using ProtoCore.AST.AssociativeAST;
 using VMDataBridge;
 
 namespace CoreNodeModels.Input

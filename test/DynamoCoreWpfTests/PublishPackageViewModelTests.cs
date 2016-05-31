@@ -1,15 +1,14 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Dynamo.PackageManager;
-using System.IO;
 using Dynamo.Tests;
-using System;
-using Moq;
-using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace DynamoCoreWpfTests
 {
-     [TestFixture]
+    [TestFixture]
     public class PublishPackageViewModelTests: DynamoViewModelUnitTest
     {
 

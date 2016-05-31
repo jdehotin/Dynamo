@@ -1,11 +1,11 @@
-using ProtoCore.AST;
-using ProtoCore.DSASM;
-using ProtoCore.Properties;
-using ProtoCore.Utils;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
+using ProtoCore.AST;
+using ProtoCore.DSASM;
+using ProtoCore.Properties;
+using ProtoCore.Utils;
 
 namespace ProtoCore
 {

@@ -1,6 +1,6 @@
-﻿using Dynamo.Graph;
+﻿using System.Collections.Generic;
+using Dynamo.Graph;
 using ProtoCore.AST.AssociativeAST;
-using System.Collections.Generic;
 
 namespace CoreNodeModels.Input
 {

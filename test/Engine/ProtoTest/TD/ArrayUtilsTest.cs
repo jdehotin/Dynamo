@@ -4,7 +4,6 @@ using NUnit.Framework;
 using ProtoCore.DSASM;
 using ProtoCore.DSASM.Mirror;
 using ProtoCore.Utils;
-using ProtoFFI;
 namespace ProtoTest.UtilsTests
 {
     [TestFixture]

@@ -1,8 +1,6 @@
-﻿using Dynamo.Interfaces;
-using Dynamo.Logging;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Dynamo.Logging;
 
 namespace Dynamo.Wpf.Extensions
 {
