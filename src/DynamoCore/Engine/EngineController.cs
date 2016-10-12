@@ -510,7 +510,7 @@ namespace Dynamo.Engine
         internal void DeleteFrozenNodesFromAST(NodeModel node)
         {
             HashSet<NodeModel> gathered = new HashSet<NodeModel>();
-            node.GetDownstreamNodes(node, gathered);
+            node.GetDownstreamNodes(gathered);
             foreach (var iNode in gathered)
             {
                 syncDataManager.DeleteNodes(iNode.GUID);

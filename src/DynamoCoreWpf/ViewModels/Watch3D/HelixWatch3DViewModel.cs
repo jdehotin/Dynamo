@@ -668,7 +668,7 @@ namespace Dynamo.Wpf.ViewModels.Watch3D
 
                 case "IsFrozen":
                     HashSet<NodeModel> gathered = new HashSet<NodeModel>();
-                    node.GetDownstreamNodes(node, gathered);
+                    node.GetDownstreamNodes(gathered);
                     SetGeometryFrozen(gathered);
                     break;
             }

@@ -646,9 +646,9 @@ namespace Dynamo.Graph.Nodes
                 //If the node is Unfreezed then Mark all the downstream nodes as
                 // modified. This is essential recompiling the AST.
                 if (!value)
-                { 
-                    MarkDownStreamNodesAsModified(this);
-                    OnNodeModified();  
+                {
+                    MarkDownStreamNodesAsModified();
+                    OnNodeModified();
                     RaisePropertyChanged("IsFrozen");
                 }
                 //If the node is frozen, then do not execute the graph immediately.
@@ -656,7 +656,8 @@ namespace Dynamo.Graph.Nodes
                 else
                 {
                     ComputeUpstreamOnDownstreamNodes();
-                    OnUpdateASTCollection();                  
+                    RaisePropertyChanged("IsFrozen");
+                    OnUpdateASTCollection();
                 }
             }
         }
@@ -679,16 +680,12 @@ namespace Dynamo.Graph.Nodes
         /// </summary>
         internal void ComputeUpstreamCache()
         {
-            this.UpstreamCache = new HashSet<NodeModel>();
-            var inpNodes = this.InputNodes.Values;
+            var inpNodes = this.InputNodes.Values.Select(x => x.Item2);
+            this.UpstreamCache = new HashSet<NodeModel>(inpNodes);
 
-            foreach (var inputnode in inpNodes.Where(x => x != null))
+            foreach (var inputnode in inpNodes)
             {
-                this.UpstreamCache.Add(inputnode.Item2);
-                foreach (var upstreamNode in inputnode.Item2.UpstreamCache)
-                {
-                    this.UpstreamCache.Add(upstreamNode);
-                }
+                this.UpstreamCache.UnionWith(inputnode.UpstreamCache);
             }
         }
 
@@ -696,40 +693,36 @@ namespace Dynamo.Graph.Nodes
         /// For a given node, this function computes all the upstream nodes
         /// by gathering the cached upstream nodes on this node's immediate parents.
         /// If a node has any downstream nodes, then for all those downstream nodes, upstream
-        /// nodes will be computed. Essentially this method propogates the UpstreamCache down.
-        /// Also this function gets called only after the workspace is added.    
-        /// </summary>      
+        /// nodes will be computed. Essentially this method propagates the UpstreamCache down.
+        /// Also this function gets called only after the workspace is added.
+        /// </summary>
         internal void ComputeUpstreamOnDownstreamNodes()
         {
-            //first compute upstream nodes for this node
+            // first compute upstream nodes for this node
             ComputeUpstreamCache();
 
-            //then for downstream nodes
-            //gather downstream nodes and bail if we see an already visited node
+            // gather downstream nodes
             HashSet<NodeModel> downStreamNodes = new HashSet<NodeModel>();
-            this.GetDownstreamNodes(this, downStreamNodes);
+            GetDownstreamNodes(downStreamNodes);
 
+            // Sort the nodes in topological order so that no object is
+            // visited before all its parents in the set are visited.
             foreach (var downstreamNode in AstBuilder.TopologicalSort(downStreamNodes))
             {
-                downstreamNode.UpstreamCache = new HashSet<NodeModel>();
-                var currentinpNodes = downstreamNode.InputNodes.Values;                
-                foreach (var inputnode in currentinpNodes.Where(x => x != null))
+                var inNodes = downstreamNode.InputNodes.Values.Select(x => x.Item2);
+                downstreamNode.UpstreamCache = new HashSet<NodeModel>(inNodes);
+
+                foreach (var inputnode in inNodes)
                 {
-                    downstreamNode.UpstreamCache.Add(inputnode.Item2);
-                    foreach (var upstreamNode in inputnode.Item2.UpstreamCache)
-                    {
-                        downstreamNode.UpstreamCache.Add(upstreamNode);
-                    }
+                    downstreamNode.UpstreamCache.UnionWith(inputnode.UpstreamCache);
                 }
             }
-                    
-            RaisePropertyChanged("IsFrozen");           
         }
-       
-        private void MarkDownStreamNodesAsModified(NodeModel node)
+
+        private void MarkDownStreamNodesAsModified()
         {
             HashSet<NodeModel> gathered = new HashSet<NodeModel>();
-            GetDownstreamNodes(node, gathered);
+            GetDownstreamNodes(gathered);
             foreach (var iNode in gathered)
             {
                 iNode.executionHint = ExecutionHints.Modified;
@@ -739,21 +732,15 @@ namespace Dynamo.Graph.Nodes
         /// <summary>
         /// Returns the downstream nodes for the given node.
         /// </summary>
-        /// <param name="node">The node.</param>
         /// <param name="gathered">The gathered.</param>
-        internal void GetDownstreamNodes(NodeModel node, HashSet<NodeModel> gathered)
+        internal void GetDownstreamNodes(HashSet<NodeModel> gathered)
         {
-            if (gathered.Contains(node)) // Considered this node before, bail.pu
-                return;
-
-            gathered.Add(node);
-
-            var sets = node.OutputNodes.Values;
-            var outputNodes = sets.SelectMany(set => set.Select(t => t.Item2));
-            foreach (var outputNode in outputNodes)
+            foreach (var node in OutputNodes.Values.
+                     SelectMany(set => set.Select(t => t.Item2)).
+                     Where(x => !gathered.Contains(x)))
             {
-                // Recursively get all downstream nodes.
-                GetDownstreamNodes(outputNode, gathered);
+                gathered.Add(node);
+                node.GetDownstreamNodes(gathered);
             }
         }
         #endregion
@@ -1967,8 +1954,8 @@ namespace Dynamo.Graph.Nodes
                 //undo is for toggling freeze. This is ONLY modifying the execution hint.
                 // this does not run the graph.
                 RaisePropertyChanged("IsFrozen");
-                MarkDownStreamNodesAsModified(this);
-               
+                MarkDownStreamNodesAsModified();
+
                 // Notify listeners that the position of the node has changed,
                 // then all connected connectors will also redraw themselves.
                 ReportPosition();

@@ -1094,7 +1094,7 @@ namespace Dynamo.ViewModels
         private void RaisePropertyChangedOnDownStreamNodes()
         {
             HashSet<NodeModel> nodes = new HashSet<NodeModel>();
-            this.nodeLogic.GetDownstreamNodes(this.nodeLogic, nodes);
+            this.nodeLogic.GetDownstreamNodes(nodes);
 
             foreach (var inode in nodes)
             {
